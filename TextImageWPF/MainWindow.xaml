@@ -1,0 +1,87 @@
+﻿<Window
+    x:Class="TextImageWPF.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:TextImageWPF"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="{Binding Path=WindowTitel, FallbackValue=WindowTitel}"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.Icon>
+        <BitmapImage UriSource="pack://application:,,,/Resources/Picture/ApplicationIcon.png" />
+    </Window.Icon>
+
+    <Grid x:Name="gridMain">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Orientation="Horizontal">
+            <Button
+                x:Name="BtnCloseApplication"
+                Width="35"
+                Height="35"
+                HorizontalAlignment="Left">
+                <Image Source="{StaticResource ResourceKey=IconApplicationExit2}" Stretch="None" />
+            </Button>
+
+            <Button
+                x:Name="BtnImageA"
+                Width="100"
+                Height="35"
+                Margin="5,0,0,0"
+                HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{StaticResource ResourceKey=IconBtnImageA}" Stretch="None" />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        Text=" Rechteck" />
+                </StackPanel>
+            </Button>
+
+            <Button
+                x:Name="BtnImageB"
+                Width="100"
+                Height="35"
+                Margin="5,0,0,0"
+                HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="{StaticResource ResourceKey=IconBtnImageA}" Stretch="None" />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        Text=" Kreis" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <Line
+            Grid.Row="0"
+            Stroke="Blue"
+            StrokeThickness="2"
+            X1="0"
+            X2="{Binding ActualWidth, ElementName=gridMain}"
+            Y1="40"
+            Y2="40" />
+
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="24"
+            Text="{Binding Path=WindowTitel, FallbackValue=~WindowTitel}" />
+
+    </Grid>
+</Window>
