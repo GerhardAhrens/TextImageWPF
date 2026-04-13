@@ -1,16 +1,10 @@
-<style>
-r { color: Red }
-o { color: Orange }
-g { color: Green }
-b { color: Black }
-</style>
 
 # TextImageWPF
 
-![NET](https://img.shields.io/badge/NET-8.0-green.svg)
+![NET](https://img.shields.io/badge/NET-10-red.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![VS2022](https://img.shields.io/badge/Visual%20Studio-2022-white.svg)
-![Version](https://img.shields.io/badge/Version-1.0.2026.0-yellow.svg)]
+![Version](https://img.shields.io/badge/Version-1.0.2026.1-yellow.svg)
 
 Das Beispiel zeigt, wie ein Bitmap mit einem Custom Text (z.B. png) als Datei oder als Byte-Array erstellt werden kann.
 
@@ -26,6 +20,8 @@ TextImageRenderer.RectangleTextToFile(@"C:\Temp\Bild_RectangleText.png",
                                       backgroundColor: Brushes.LightGray);
 ```
 
+<img src="DemoA.png" style="width:250px;"/>
+
 ## Erstellen eines Text-Bitmaps (<r>als png Datei</r>), mit einem Text als Kreis.
 ```csharp
 TextImageRenderer.CircleTextToFile(@"C:\Temp\Bild_CircleText.png", 
@@ -33,3 +29,9 @@ TextImageRenderer.CircleTextToFile(@"C:\Temp\Bild_CircleText.png",
                                    diameter: 160,
                                    circleBrush: Brushes.DarkSlateBlue);
 ```
+
+<img src="DemoB.png" style="width:150px;"/>
+
+# Versionshistorie
+![Version](https://img.shields.io/badge/Version-1.0.2026.1-yellow.svg)
+- Migration auf NET 10
